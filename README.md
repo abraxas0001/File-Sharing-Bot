@@ -57,7 +57,18 @@ BOT_TOKEN=your_bot_token_here
 ADMIN_ID=your_telegram_user_id
 ```
 
-4. **Run the bot**
+4. **Initialize database files**
+```bash
+python init_db.py
+```
+
+5. **Add your admin ID to admin_list.json**
+Edit `admin_list.json` to include your Telegram user ID:
+```json
+[123456789]
+```
+
+6. **Run the bot**
 ```bash
 python bot.py
 ```
