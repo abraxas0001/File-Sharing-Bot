@@ -1,0 +1,9 @@
+# Railway Deployment Configuration
+[build]
+  builder = "NIXPACKS"
+
+[deploy]
+  startCommand = "python bot.py"
+
+[env]
+  PORT = "8080"

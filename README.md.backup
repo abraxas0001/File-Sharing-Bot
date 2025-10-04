@@ -1,0 +1,339 @@
+# 🤖 Bhaichara Bot
+
+A powerful Telegram media management bot with advanced features for media storage, sharing, and administration. Built with Python-Telegram-Bot v20.6 with high-performance parallel processing capabilities.
+
+## 🌟 Features
+
+### 📁 **Media Management**
+- **Multi-format Support**: Videos, photos, documents, audio, voice messages, animations, and stickers
+- **Tag-based Organization**: Organize media with custom tags for easy retrieval
+- **Batch Upload**: Upload multiple media files at once with custom batch system
+- **Smart Indexing**: Automatic indexing with gap-free media organization
+- **Media Protection**: Toggle content protection to prevent saving/downloading
+- **Welcome Image**: Customizable welcome image for the `/start` command
+
+### 🔗 **Link Generation & Sharing**
+- **Shareable Links**: Generate public links for individual media or entire collections
+- **Range Links**: Create links for specific media ranges (e.g., videos 1-10)
+- **Link Management**: Pass/revoke links, view active links
+- **Deep Linking**: Direct access via `t.me/YourBot?start=tag_index`
+
+### ❤️ **Favorites System**
+- **Personal Favorites**: Users can save their favorite media
+- **Favorites Navigation**: Browse favorites with Previous/Next buttons
+- **Admin Insights**: View user favorites and video statistics
+- **Top Videos**: Music player-style navigation for most liked content
+
+### 🎲 **Smart Features**
+- **Random Media**: Get random videos from any tag
+- **Top Videos Player**: Navigate through most liked videos like a music player
+- **Auto-delete System**: Automatically delete sent media after specified time
+- **User Preferences**: Customizable notification and auto-delete settings
+
+### 📊 **Advanced Analytics**
+- **User Statistics**: Track user interactions and registration sources
+- **Video Statistics**: View likes, shares, and popularity metrics  
+- **Broadcasting Analytics**: Detailed broadcast success/failure rates
+- **Deleted Media Tracking**: Track and restore accidentally deleted media
+
+## 🚀 **Quick Start**
+
+### Prerequisites
+- Python 3.11+
+- Telegram Bot Token (from [@BotFather](https://t.me/BotFather))
+- Admin Telegram User ID
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/abraxas0001/Bhaichara-Bot.git
+cd Bhaichara-Bot
+```
+
+2. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Configure environment variables**
+Create a `.env` file:
+```env
+BOT_TOKEN=your_bot_token_here
+ADMIN_ID=your_telegram_user_id
+PORT=8080
+```
+
+4. **Run the bot**
+```bash
+python bot.py
+```
+
+## 📋 **Commands Reference**
+
+### 👤 **User Commands**
+A powerful Telegram media management bot with advanced features for media storage, sharing, and administration. Built with Python-Telegram-Bot v20.6 with high-performance parallel processing capabilities.
+# 🤖 Knowledge Vault Bot
+
+A Telegram knowledge & resource library bot for ebooks, documents, study packs, whitepapers, technical media and curated discovery. Rebranded from an earlier media bot to a clean academic / archival experience. Built on python-telegram-bot v20.x with high-performance async architecture.
+| Command | Description |
+|---------|-------------|
+| `/start` | Start the bot and see main menu |
+
+- **Multi-format Support**: Ebooks (PDF/EPUB), documents, lecture clips, infographics, research snapshots, code archives
+- **Collection-Based Organization**: Tag resources into themed collections (e.g. `physics`, `ai`, `history`, `essentials`)
+- **Batch Upload**: Rapidly ingest curated packs
+- **Smart Indexing**: Stable positional indexing without gaps
+- **Content Protection**: Optional anti-download forwarding protection
+- **Welcome Artwork**: Optional welcome asset for `/start`
+| Command | Usage | Description |
+
+- **Shareable Links**: Deep-links to resource collections or single entries
+- **Range Links**: Expose controlled slices (e.g. docs 10–25)
+- **Dual System**: Public links vs curated Random Pick pool
+- **Direct Invocation**: `t.me/YourBot?start=collection_index`
+### 🔗 **Link Commands**
+| `/passlink` | `/passlink <tag>` | Generate and pass a link |
+- **User Bookmarks**: Save any resource
+- **Navigator UI**: Previous/Next inline navigation
+- **Top Resources**: Ranked by bookmark count
+- **Admin Insight**: Who bookmarked what
+| `/revoke` | `/revoke <tag>` | Revoke public access |
+## 🛡️ **Admin Commands**
+- **Browse Library**: Full access layer
+- **Random Pick**: Curated pool for serendipity
+- **Auto-Delete (Optional)**: Ephemeral delivery mode
+- **User Prefs**: Notification + retention toggles
+
+| `/upload` | Reply to media | Upload media to database |
+- **User Metrics**: Interaction + source
+- **Resource Popularity**: Bookmark frequency & distribution
+- **Broadcast Diagnostics**: Success/failure telemetry
+- **Deletion/Recovery**: Soft-deleted archive view
+| `/remove` | `/remove <tag> <index>` | Remove specific media |
+| `/listvideo` | `/listvideo <tag>` | List media in a tag |
+
+### 📊 **Analytics & Statistics**
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/userstats` | - | User registration statistics |
+| `/userinfo` | `/userinfo <user_id>` | Detailed user information |
+| `/topusers` | - | Most active users with pagination |
+| `/userfavorites` | `/userfavorites <user_id>` | View user's favorites |
+| `/videostats` | - | Video statistics and analytics |
+| `/bstats` | - | Broadcasting statistics |
+
+### 🗑️ **Deleted Media Management**
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/listdeleted` | - | List all deleted media with pagination |
+| `/restoredeleted` | `/restoredeleted <video_key>` | Restore specific deleted media |
+| `/restoreall` | - | Restore all deleted media |
+| `/cleardeleted` | - | Permanently clear deleted media |
+| `/cleanupdeleted` | - | Clean up corrupted deleted entries |
+| `/debugdeleted` | `/debugdeleted <tag>` | Debug deleted media for a tag |
+| `/deletedstats` | - | Statistics about deleted media |
+
+### 📡 **Broadcasting System**
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/broadcast` | `/broadcast <message>` | Send message to all users |
+| `/dbroadcast` | `/dbroadcast <seconds> <message>` | Auto-deleting broadcast |
+| `/pbroadcast` | `/pbroadcast <message>` | Pinned broadcast message |
+| `/sbroadcast` | `/sbroadcast <message>` | Silent broadcast (no notification) |
+| `/fbroadcast` | Reply to message | Forward broadcast message |
+| `/discover` | - | Discover and migrate users |
+| `/addusers` | `/addusers <user_id1> <user_id2>` | Manually add user IDs |
+
+### 🛡️ **Protection & Security**
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/protection` | - | Check protection status |
+| `/protectionon` / `/pon` | - | Enable media protection |
+| `/protectionoff` / `/poff` | - | Disable media protection |
+| `/testprotection` | - | Test protection with sample media |
+| `/checkprotection` | - | Analyze protection coverage |
+
+### 🧹 **Auto-Delete System**
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/autodelete` | - | Show auto-delete status |
+| `/autodelete on/off` | - | Enable/disable auto-deletion |
+| `/autodelete hours <number>` | - | Set deletion time |
+| `/autodelete clear` | - | Clear tracking list |
+| `/autodelete stats` | - | Detailed auto-delete statistics |
+| `/notifications on/off` | - | Control deletion notifications |
+
+### 📦 **Batch Processing**
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/custom_batch` | `/custom_batch <tag>` | Start custom batch collection |
+| `/stop_batch` | - | Stop and save current batch |
+| `/cancel_batch` | - | Cancel current batch |
+| `/batch_status` | - | Check batch collection status |
+
+### ⚙️ **Bot Management**
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/add_admin` | `/add_admin <user_id>` | Add new admin |
+| `/remove_admin` | `/remove_admin <user_id>` | Remove admin |
+| `/list_admins` | - | List all admins |
+| `/set_global_caption` | `/set_global_caption <text>` | Set global caption |
+| `/checkupdates` | - | Manually check pending updates |
+
+### 🖼️ **Welcome Image Management**
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/getfileid` | Reply to any media | Get file_id from photos/videos/documents |
+| `/setwelcomeimage` | `/setwelcomeimage <file_id>` | Set welcome image for `/start` |
+| `/setwelcomeimage clear` | - | Remove welcome image |
+| `/testwelcomeimage` | - | Test welcome image display |
+
+> **💡 How to set up welcome image:**
+> 1. Send your desired image to the bot
+> 2. Reply to that image with `/getfileid`
+> 3. Copy the file_id from the response
+> 4. Use `/setwelcomeimage <file_id>` to set it
+> 5. Test with `/testwelcomeimage`
+
+## 🎮 **Interactive Features**
+
+### 🎵 **Music Player-Style Navigation**
+- **Top Videos**: Browse most liked content with Previous/Next buttons
+- **Seamless Transitions**: Video changes without deleting the message window
+- **Real-time Updates**: Live like counts and rankings
+
+### ⭐ **Smart Favorites**
+- **One-Click Favorites**: Heart button to add/remove favorites
+- **Personal Collections**: Each user has their own favorites list  
+- **Admin Insights**: Admins can view who liked which videos
+
+### 🔗 **Advanced Link System**
+- **Flexible Sharing**: Share individual files or entire collections
+- **Range Support**: Generate links for specific ranges
+- **Access Control**: Pass/revoke access anytime
+
+## 🏗️ **Architecture**
+
+### 🚀 **High Performance**
+- **Parallel Processing**: Send media to multiple users simultaneously
+- **Connection Pooling**: 16 concurrent connections with 128 concurrent updates
+- **Smart Rate Limiting**: Per-user semaphores prevent flood errors
+- **Efficient Caching**: In-memory data structures for fast access
+
+### 📁 **Data Structure**
+```
+media_data/
+├── tag1/
+│   ├── [0] video.mp4
+│   ├── [1] photo.jpg
+│   └── [2] document.pdf
+├── tag2/
+│   └── [0] animation.gif
+└── ...
+```
+
+### 🗄️ **Database Files**
+- `media_db.json` - Main media database
+- `admin_list.json` - Admin user IDs
+
+|----------|-------------|----------|
+| `BOT_TOKEN` | Telegram Bot Token | ✅ Yes |
+
+```python
+# Connection Settings
+connection_pool_size = 16
+pool_timeout = 30
+concurrent_updates = 128
+
+# Rate Limiting
+video_send_semaphore = asyncio.Semaphore(16)
+per_user_semaphores = {}
+
+# Auto-deletion
+### **Railway (Recommended)**
+
+1. **Push to GitHub**
+```bash
+git add .
+git commit -m "Deploy to Railway"
+git push origin main
+```
+
+2. **Deploy on Railway**
+- Go to [railway.app](https://railway.app)
+- Connect GitHub repository
+- Add environment variables
+- Auto-deploy on every commit
+
+### **Manual Server Deployment**
+
+```bash
+# Clone and setup
+git clone https://github.com/abraxas0001/Bhaichara-Bot.git
+cd Bhaichara-Bot
+pip install -r requirements.txt
+
+# Configure environment
+cp .env.example .env
+# Edit .env with your values
+
+# Run with PM2 (recommended)
+pm2 start bot.py --name "bhaichara-bot"
+pm2 save
+```
+# Build and run
+docker build -t bhaichara-bot .
+docker run -d --env-file .env bhaichara-bot
+```
+
+## 📊 **Features Overview**
+
+### ✅ **What's Included**
+
+- 🔥 **Parallel Media Delivery** - Send to multiple users simultaneously
+- 🎵 **Music Player Navigation** - Smooth video transitions
+- ❤️ **Advanced Favorites System** - Personal collections with analytics
+- 📡 **Powerful Broadcasting** - Multiple broadcast types with statistics
+- 🛡️ **Media Protection** - Prevent unauthorized downloading
+- 🗑️ **Smart Deletion System** - Soft delete with restoration capabilities
+- 📊 **Comprehensive Analytics** - User, video, and system statistics
+- 🔗 **Flexible Link Sharing** - Multiple sharing modes
+- 🧹 **Auto-cleanup** - Automatic message deletion
+- 👥 **User Management** - Auto-registration and tracking
+
+### 🎯 **Perfect For**
+
+- **Content Creators** - Organize and share media collections
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🐛 **Support**
+
+If you encounter any issues or have questions:
+
+1. Check the [Issues](https://github.com/abraxas0001/Bhaichara-Bot/issues) page
+2. Create a new issue if your problem isn't already listed
+3. Provide detailed information about the problem
+
+## 🔄 **Updates & Changelog**
+
+### Latest Features
+- ✅ **Parallel Processing** - Multiple users get media simultaneously
+- ✅ **Music Player Navigation** - Smooth video transitions in top videos
+<div align="center">
+
+**Made with ❤️ for the Telegram community**
+
+⭐ **Star this repository if you found it helpful!**
+
+</div>
