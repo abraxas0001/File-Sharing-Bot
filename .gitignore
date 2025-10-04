@@ -1,5 +1,6 @@
 # Bot specific files
-*.json
+# Allowing JSON files for database
+# *.json
 !requirements.txt
 *.db
 *.sqlite
@@ -14,21 +15,21 @@ ENV/
 env.bak/
 venv.bak/
 
-# Bot data (keep local only)
-media_db.json
-users_db.json
-favorites_db.json
-deleted_media.json
-admin_list.json
-protection_settings.json
-auto_delete_tracking.json
-last_update_offset.json
-passed_links.json
-active_links.json
-exempted_users.json
-user_preferences.json
-caption_config.json
-random_state.json
+# Bot data (including in repository for direct use)
+# media_db.json
+# users_db.json
+# favorites_db.json
+# deleted_media.json
+# admin_list.json
+# protection_settings.json
+# auto_delete_tracking.json
+# last_update_offset.json
+# passed_links.json
+# active_links.json
+# exempted_users.json
+# user_preferences.json
+# caption_config.json
+# random_state.json
 
 # Images and media
 *.jpg

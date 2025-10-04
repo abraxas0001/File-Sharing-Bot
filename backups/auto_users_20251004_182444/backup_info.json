@@ -1,0 +1,93 @@
+{
+  "name": "auto_users_20251004_182444",
+  "created_at": "2025-10-04T18:24:44.667132",
+  "description": "Auto-backup after users data changes",
+  "files": {
+    "media_db.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "users_db.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "favorites_db.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "passed_links.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "active_links.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "deleted_media.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "random_state.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "user_preferences.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "admin_list.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "exempted_users.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "caption_config.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "protection_settings.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "auto_delete_tracking.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    },
+    "last_update_offset.json": {
+      "size": 0,
+      "hash": "",
+      "backed_up": false,
+      "reason": "file_not_found"
+    }
+  },
+  "total_files": 0,
+  "total_size": 0
+}

@@ -1,0 +1,9 @@
+{
+  "global_caption": "",
+  "replacement_rules": [
+    {
+      "find": "By @beCineAdult",
+      "replace": "by @beinghumanassociation"
+    }
+  ]
+}
