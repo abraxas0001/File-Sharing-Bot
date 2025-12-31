@@ -10030,7 +10030,7 @@ async def poff_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     print("🤖 Knowledge Vault Bot - Starting...")
     keep_alive()  # Remove this line if not using Replit
-    app = Application.builder().token(BOT_TOKEN).connection_pool_size(16).pool_timeout(30).connect_timeout(120.0).read_timeout(120.0).write_timeout(120.0).concurrent_updates(128).post_init(post_init_callback).build()
+    app = Application.builder().token(BOT_TOKEN).connect_timeout(300.0).read_timeout(300.0).write_timeout(300.0).concurrent_updates(128).post_init(post_init_callback).build()
     
     # Initialize random state
     update_random_state()
