@@ -2045,10 +2045,17 @@ def save_users():
         json.dump(users_data, f, indent=2)
     # Auto-backup after users changes
     try:
-        # Store task reference to prevent "coroutine never awaited" warning
-        global auto_backup_task
-        auto_backup_task = asyncio.create_task(auto_backup_data("users"))
-    except:
+        # Check if there's a running loop before creating task
+        try:
+            loop = asyncio.get_running_loop()
+        except RuntimeError:
+            loop = None
+            
+        if loop and loop.is_running():
+            # Store task reference to prevent "coroutine never awaited" warning
+            global auto_backup_task
+            auto_backup_task = asyncio.create_task(auto_backup_data("users"))
+    except Exception:
         pass
 
 
@@ -10022,7 +10029,7 @@ async def poff_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     print("🤖 Knowledge Vault Bot - Starting...")
     keep_alive()  # Remove this line if not using Replit
-    app = Application.builder().token(BOT_TOKEN).connection_pool_size(16).pool_timeout(30).concurrent_updates(128).post_init(post_init_callback).build()
+    app = Application.builder().token(BOT_TOKEN).connection_pool_size(16).pool_timeout(30).connect_timeout(60.0).read_timeout(60.0).write_timeout(60.0).concurrent_updates(128).post_init(post_init_callback).build()
     
     # Initialize random state
     update_random_state()
