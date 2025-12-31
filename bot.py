@@ -15,6 +15,7 @@ if not ADMIN_ID:
 ADMIN_ID = int(ADMIN_ID)
 import json
 import asyncio
+import html
 import random
 from datetime import datetime, timedelta, time
 from collections import defaultdict
@@ -2296,7 +2297,7 @@ async def is_user_member(user_id, bot, channel):
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
-    mention = f'<a href="tg://user?id={user.id}">{user.first_name}</a>'
+    mention = f'<a href="tg://user?id={user.id}">{html.escape(user.first_name)}</a>'
     args = context.args
     
     # Auto-register user (this handles all user tracking)
